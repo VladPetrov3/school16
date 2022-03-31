@@ -10,10 +10,10 @@ int F(int n) {
     if (n > 30) {
         return n * n + 5 * n + 4;
     }
-    if (n % 2 == 0 && n <= 3) {
+    if (n % 2 == 0 && n <= 30) {
         return F(n + 1) + 3 * F(n + 4);
     }
-    else if (n % 2 != 0 && n <= 3) {
+    else if (n % 2 != 0 && n <= 30) {
         return 2 * F(n + 2) + F(n + 5);
     }
 }
@@ -29,7 +29,7 @@ int sum(int n) {
 int main()
 {
     int c = 0;
-    for (int i = 1; i < 1000; i++) {
+    for (int i = 1; i <= 1000; i++) {
         if (sum(F(i)) == 27) {
             c++;
         }
