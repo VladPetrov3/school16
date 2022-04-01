@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1646033593 source:c:\users\public\documents\10 класс 2021-2022\Петров\vlad112\main.cpp
+	<iostream>
+	<vector>
+	<algorithm>
+

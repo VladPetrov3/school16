@@ -1,0 +1,7 @@
+# depslib dependency file v1.0
+1647237938 source:c:\users\public\documents\10 класс 2021-2022\Петров\Проект\практика\55\main.cpp
+	<iostream>
+	<algorithm>
+	<vector>
+	<climits>
+
