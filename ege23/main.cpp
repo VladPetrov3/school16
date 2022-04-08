@@ -1,20 +1,32 @@
 #include <iostream>
+#include <vector>
+#include <set>
+
 
 using namespace std;
-int defg(int x,int t){
-    if ( x == t){
-        return 1;
-    }
-    if(x > t){
-        return 0;
-    }
-    else if(x < t) {
-        return defg( x+1, t ) +  defg( x+3, t ) + defg( x*x, t ) ;
-    }
-}
 
-int main() {
-    for( int i = 2; i <= 19; i++){
-    cout << defg(2,i) << endl;
+int main()
+{
+    vector <int> v={1};
+    int l=0;
+    while (l!=8){
+        int n = v.size();
+        for (int i = 0; i < n;i++){
+            int x = v[0];
+            v.erase(v.begin());
+            v.push_back(x+1);
+            v.push_back(x+5);
+            v.push_back(x*3);
+        }
+        l++;
     }
+    int c =0;
+    set <int> s(v.begin(),v.end());
+
+    for (int x : s){
+        if ( x >= 1000 && x <= 1024){
+            c++;
+        }
+    }
+    cout << c;
 }
